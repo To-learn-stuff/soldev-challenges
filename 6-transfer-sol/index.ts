@@ -2,8 +2,29 @@ import * as web3 from "@solana/web3.js"
 import "dotenv/config"
 import {getKeypairFromEnvironment, airdropIfRequired} from "@solana-developers/helpers"
 
-const key = new web3.PublicKey("Ah9K7dQ8EHaZqcAsgBW8w37yN2eAy3koFmUn4x3CJto9")
+const sender = getKeypairFromEnvironment("SECRET_KEY")
 
-console.log(key)
+const recipient = new web3.PublicKey("8arMAPKh8UJQJSAoxCTvsYhM6VXEErgkPa3VxFzRXEPP")
+const LAMPORTS_PER_SOL = 1000000000; // 1 SOL
+const amount = 0.01 * LAMPORTS_PER_SOL;
 
-console.log("Ah9K7dQ8EHaZqcAsgBW8w37yN2eAy3koFmUn4x3CJtod".length)
+async function main(){
+    const connection = new web3.Connection("https://api.devnet.solana.com")
+
+    const transaction = new web3.Transaction().add(
+        web3.SystemProgram.transfer({
+            fromPubkey: sender.publicKey,
+            toPubkey: recipient,
+            lamports: amount
+        })
+    )
+
+    const signature = await web3.sendAndConfirmTransaction(
+        connection,
+        transaction,
+        [sender]
+    )
+
+    console.log(`You can view your transaction on Solana Explorer at:\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`)
+}
+main()
