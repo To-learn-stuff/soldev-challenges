@@ -1,0 +1,20 @@
+{
+  "name": "ONE",
+  "symbol": "2BIT",
+  "description": "NFT number 1",
+  "image": "1.png",
+  "attributes": [
+    {
+      "trait_type": "Number",
+      "value": "1"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

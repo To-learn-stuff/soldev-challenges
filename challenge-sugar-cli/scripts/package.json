@@ -1,0 +1,27 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "scripts to upload metadata",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-solana-dev/sugar-cli.git"
+  },
+  "author": "Anik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learn-solana-dev/sugar-cli/issues"
+  },
+  "homepage": "https://github.com/learn-solana-dev/sugar-cli#readme",
+  "dependencies": {
+    "@metaplex-foundation/js": "^0.20.1",
+    "@metaplex-foundation/js-plugin-nft-storage": "^0.20.0",
+    "@solana/spl-token": "^0.4.7",
+    "@solana/web3.js": "^1.94.0",
+    "dotenv": "^16.4.5"
+  }
+}

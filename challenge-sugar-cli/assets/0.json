@@ -1,0 +1,20 @@
+{
+  "name": "ZERO",
+  "symbol": "2BIT",
+  "description": "NFT number 0",
+  "image": "0.png",
+  "attributes": [
+    {
+      "trait_type": "Number",
+      "value": "0"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

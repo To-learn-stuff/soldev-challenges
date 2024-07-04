@@ -1,0 +1,46 @@
+{
+  "tokenStandard": "nft",
+  "number": 4,
+  "symbol": "2BIT",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": true,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "AR4yiFR3hqJTsjztTe8y9YDt7oWysTgBEesGX6D1e5vz",
+      "share": 50
+    },
+    {
+      "address": "8arMAPKh8UJQJSAoxCTvsYhM6VXEErgkPa3VxFzRXEPP",
+      "share": 50
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "ruleSet": null,
+  "awsConfig": null,
+  "sdriveApiKey": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": {
+    "default": {
+      "botTax": {
+        "value": 0.01,
+        "lastInstruction": true
+      },
+      "mintLimit": {
+         "id": 1,
+          "limit": 5 
+      },
+      "solPayment":{
+        "value": 0.03,
+        "destination": "8arMAPKh8UJQJSAoxCTvsYhM6VXEErgkPa3VxFzRXEPP"
+      },
+      "startDate":{
+        "date": "2024-07-03T15:30:00.000Z"
+      }
+    }
+  },
+  "maxEditionSupply": null
+}
